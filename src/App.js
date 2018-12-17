@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Headline from './components/Headline';
 import Addtodo from './components/Addtodo';
+import Showtodo from './components/Showtodo/Showtodo';
 
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -16,6 +17,7 @@ class App extends Component {
           <header className="App-header">
               <Headline />
               <Addtodo />
+              <Showtodo />
           </header>
         </div>
       </Provider>

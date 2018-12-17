@@ -1,6 +1,6 @@
 const initialState = {
     id: [],
-    todos: 'yes'
+    todos: ''
 }
 
 const rootReducer = (state = initialState, action) => {

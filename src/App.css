@@ -7,6 +7,35 @@ body {
   background: #0285ad;
 }
 
+/*--------------------------
+        Global Style
+---------------------------*/    
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+
+.mb-50{
+  margin-bottom: 50px;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+/*--------------------------
+        App header Style
+---------------------------*/  
+
 .App {
   width: 70%;
   margin: 0px auto;
@@ -15,10 +44,19 @@ body {
   width: 40%;
   margin: 0px auto;
 }
-.aligncenter {
-  text-align: center;
+
+/*--------------------------
+        Show to do Style header Style
+---------------------------*/ 
+
+.single-todo {
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 10px 10px;
 }
 
-.color-white {
-  color: #fff;
+.single-todo::after {
+  clear: both;
+  content: "";
+  display: table;
 }
