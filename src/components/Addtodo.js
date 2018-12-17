@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {addTodo} from '../actions/Rootaction';
 
 class Addtodo extends Component {
 
@@ -13,9 +15,9 @@ class Addtodo extends Component {
         return (
             <div className="add-todo mb-50">
                 <div className="input-group mb-3">
-                    <input type="text" value={this.props.todo} className="form-control" placeholder="New Todo" onChange={this.handleChange} />
+                    <input type="text" value={this.props.todo} className="form-control" placeholder="New Todo" />
                     <div className="input-group-append">
-                        <button className="btn btn-outline-warning" type="button" id="button-addon2">Add</button>
+                        <button className="btn btn-outline-warning" type="button" onClick={()=>this.props.addTodo(this.refs.todo.value)}>Add</button>
                     </div>
                 </div>
             </div>
@@ -23,10 +25,8 @@ class Addtodo extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        todo: state.todos
-    }
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({addTodo}, dispatch);
 }
 
-export default connect(mapStateToProps)(Addtodo);
+export default connect(()=> {}, mapDispatchToProps)(Addtodo);
