@@ -11,5 +11,4 @@ deleteTodo = (todoId) => {
     };
 };
 
-
 export default {addTodo, deleteTodo};
